@@ -39,13 +39,13 @@ public extension String {
         var semanticType = Semantic.Unknown
 
         if self == version {
-            semanticType = Semantic.Same
+            semanticType = .Same
         } else if self[0] != version[advance(self.startIndex, 0)] {
-            semanticType = Semantic.Major
+            semanticType = .Major
         } else if self[0...2] != version[0...2] && self.olderThan(version) {
-            semanticType = Semantic.Minor
+            semanticType = .Minor
         } else if self[0...4] != version[0...4] && self.olderThan(version) {
-            semanticType = Semantic.Patch
+            semanticType = .Patch
         }
 
         return semanticType
