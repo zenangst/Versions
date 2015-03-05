@@ -15,7 +15,9 @@ public extension NSString {
     }
     
     func olderThan(version: String) -> Bool {
-        return !self.isEqualToString(version) ? !self.newerThan(version) : false
+        let isEqual: Bool = self == version
+        return !isEqual ? !self.newerThan(version) : false
+    }
     }
     
 }
