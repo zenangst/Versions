@@ -8,8 +8,8 @@
 
 import Foundation
 
-public extension NSString {
-    
+public extension String {
+
     func newerThan(version :String) -> Bool {
         return self.compare(version, options: NSStringCompareOptions.NumericSearch) == NSComparisonResult.OrderedDescending
     }
