@@ -43,4 +43,11 @@ class Versions_Tests: XCTestCase {
         XCTAssertFalse("".newerThan("1.0"))
     }
     
+    func testSymanticVersioning() {
+        XCTAssertEqual(Semantic.Same, "1.0".semanticCompare("1.0"))
+        XCTAssertEqual(Semantic.Major, "1.0".semanticCompare("2.0"))
+        XCTAssertEqual(Semantic.Minor, "1.2".semanticCompare("1.3"))
+        XCTAssertEqual(Semantic.Patch, "1.2.1".semanticCompare("1.2.2"))
+    }
+    
 }
