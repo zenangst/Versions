@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum Semantic: Int {
+public enum Semantic {
     case Major, Minor, Patch, Same, Unknown
 }
 
