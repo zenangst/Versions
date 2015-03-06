@@ -26,29 +26,41 @@ public extension String {
         return substringWithRange(Range(start: advance(startIndex, r.startIndex), end: advance(startIndex, r.endIndex)))
     }
 
+    var major: String {
+        return self[0]
+    }
+
     func newerThan(version :String) -> Bool {
         return self.compare(version, options: NSStringCompareOptions.NumericSearch) == NSComparisonResult.OrderedDescending
     }
-    
+
     func olderThan(version: String) -> Bool {
         let isEqual: Bool = self == version
         return !isEqual ? !self.newerThan(version) : false
     }
 
     func semanticCompare(version: String) -> Semantic {
-        var semanticType = Semantic.Unknown
 
-        if self == version {
-            semanticType = Semantic.Same
-        } else if self[0] != version[advance(self.startIndex, 0)] {
-            semanticType = Semantic.Major
-        } else if self[0...2] != version[0...2] && self.olderThan(version) {
-            semanticType = Semantic.Minor
-        } else if self[0...4] != version[0...4] && self.olderThan(version) {
-            semanticType = Semantic.Patch
+        switch self {
+        case _ where self == version:
+            return .Same
+        case _ where self.major != version.major:
+            return .Major
+        case _ where self[0...2] != version[0...2] && self.olderThan(version):
+            return .Minor
+        case _ where self[0...4] != version[0...4] && self.olderThan(version):
+            return .Patch
+        default:
+            return .Unknown
         }
-
-        return semanticType
     }
-    
 }
+
+// This way you can override pattern matching case.
+/*func ~=(pattern: String, str: String) -> Bool {
+    return str.hasPrefix(pattern)
+}*/
+
+
+
+

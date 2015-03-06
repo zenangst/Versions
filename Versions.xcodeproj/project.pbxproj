@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BDD8225D1AA4608000E48CEF /* Versions_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD8225C1AA4608000E48CEF /* Versions_Tests.swift */; };
-		BDD822651AA4608500E48CEF /* Versions.podspec in Resources */ = {isa = PBXBuildFile; fileRef = BDD822611AA4608500E48CEF /* Versions.podspec */; };
-		BDD822661AA4608500E48CEF /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = BDD822621AA4608500E48CEF /* LICENSE.md */; };
-		BDD822671AA4608500E48CEF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = BDD822631AA4608500E48CEF /* README.md */; };
 		BDD822691AA4609000E48CEF /* Versions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD822681AA4609000E48CEF /* Versions.swift */; };
 /* End PBXBuildFile section */
 
@@ -135,7 +132,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDD822651AA4608500E48CEF /* Versions.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,8 +142,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDD822671AA4608500E48CEF /* README.md in Sources */,
-				BDD822661AA4608500E48CEF /* LICENSE.md in Sources */,
 				BDD822691AA4609000E48CEF /* Versions.swift in Sources */,
 				BDD8225D1AA4608000E48CEF /* Versions_Tests.swift in Sources */,
 			);
@@ -208,7 +202,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Versions Tests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -252,7 +246,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Versions Tests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
