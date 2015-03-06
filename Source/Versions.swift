@@ -40,27 +40,27 @@ public extension String {
     }
 
     func semanticCompare(version: String) -> Semantic {
-        return semanticCompareFunc(self, version)
+
+        switch self {
+        case _ where self == version:
+            return .Same
+        case _ where self.major != version.major:
+            return .Major
+        case _ where self[0...2] != version[0...2] && self.olderThan(version):
+            return .Minor
+        case _ where self[0...4] != version[0...4] && self.olderThan(version):
+            return .Patch
+        default:
+            return .Unknown
+        }
     }
 }
 
+// This way you can override pattern matching case.
+/*func ~=(pattern: String, str: String) -> Bool {
+    return str.hasPrefix(pattern)
+}*/
 
-//FIX: can't use the same name "semanticCompare" because of Swift bug/limitation
-public func semanticCompareFunc(version1: String, version2: String) -> Semantic {
 
-    let versions = (version1, version2)
 
-    switch (versions) {
-    case let (v1, v2) where v1 == v2:
-        return .Same
-    case let (v1, v2) where v1.major != v2.major:
-        return .Major
-    case let (v1, v2) where v1[0...2] != v2[0...2] && v1.olderThan(v2):
-        return .Minor
-    case let (v1, v2) where v1[0...4] != v2[0...4] && v1.olderThan(v2):
-        return .Patch
-    default:
-        return .Unknown
-    }
-}
 
