@@ -47,6 +47,16 @@ public extension String {
         return !isEqual ? !self.newerThan(version) : false
     }
 
+    func majorChange(version: String) -> Bool {
+        return self.major != version.major
+    }
+    func minorChange(version: String) -> Bool {
+        return self.minor != version.minor && self.olderThan(version)
+    }
+    func patchChange(version: String) -> Bool {
+        return self.patch != version.patch && self.olderThan(version)
+    }
+
     func semanticCompare(version: String) -> Semantic {
 
         switch self {
