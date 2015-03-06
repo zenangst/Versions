@@ -26,11 +26,9 @@ public extension String {
         return substringWithRange(Range(start: advance(startIndex, r.startIndex), end: advance(startIndex, r.endIndex)))
     }
 
-    var firstLetter: String {
+    var major: String {
         return self[0]
     }
-
-
 
     func newerThan(version :String) -> Bool {
         return self.compare(version, options: NSStringCompareOptions.NumericSearch) == NSComparisonResult.OrderedDescending
@@ -55,7 +53,7 @@ public func semanticCompareFunc(version1: String, version2: String) -> Semantic 
     switch (versions) {
     case let (v1, v2) where v1 == v2:
         return .Same
-    case let (v1, v2) where v1.firstLetter != v2.firstLetter:
+    case let (v1, v2) where v1.major != v2.major:
         return .Major
     case let (v1, v2) where v1[0...2] != v2[0...2] && v1.olderThan(v2):
         return .Minor
