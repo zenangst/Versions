@@ -30,6 +30,14 @@ public extension String {
         return self[0]
     }
 
+    var minor: String {
+        return self[0...2]
+    }
+
+    var patch: String {
+        return self[0...4]
+    }
+
     func newerThan(version :String) -> Bool {
         return self.compare(version, options: NSStringCompareOptions.NumericSearch) == NSComparisonResult.OrderedDescending
     }
@@ -46,21 +54,12 @@ public extension String {
             return .Same
         case _ where self.major != version.major:
             return .Major
-        case _ where self[0...2] != version[0...2] && self.olderThan(version):
+        case _ where self.minor != version.minor && self.olderThan(version):
             return .Minor
-        case _ where self[0...4] != version[0...4] && self.olderThan(version):
+        case _ where self.patch != version.patch && self.olderThan(version):
             return .Patch
         default:
             return .Unknown
         }
     }
 }
-
-// This way you can override pattern matching case.
-/*func ~=(pattern: String, str: String) -> Bool {
-    return str.hasPrefix(pattern)
-}*/
-
-
-
-
