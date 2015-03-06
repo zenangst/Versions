@@ -30,6 +30,14 @@ public extension String {
         return self[0]
     }
 
+    var minor: String {
+        return self[0...2]
+    }
+
+    var patch: String {
+        return self[0...4]
+    }
+
     func newerThan(version :String) -> Bool {
         return self.compare(version, options: NSStringCompareOptions.NumericSearch) == NSComparisonResult.OrderedDescending
     }
