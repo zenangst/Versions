@@ -63,12 +63,3 @@ public extension String {
         }
     }
 }
-
-// This way you can override pattern matching case.
-/*func ~=(pattern: String, str: String) -> Bool {
-    return str.hasPrefix(pattern)
-}*/
-
-
-
-
