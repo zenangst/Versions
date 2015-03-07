@@ -8,6 +8,47 @@
 
 import Foundation
 
+extension Array {
+
+  func at(index: Int) -> T? {
+    if index > 0 && index < self.count {
+      return self[index]
+    }
+    return nil
+  }
+}
+
+public enum Patch {
+  case NumberVersion(Int)
+  case StringVersion(String)
+
+  public init?(_ patch: String?) {
+    switch patch {
+      case let .Some(x): switch x {
+        case let num where num.toInt() != nil: self = .NumberVersion(num.toInt()!)
+        default: self = .StringVersion(x)
+      }
+      case .None: return nil
+    }
+  }
+
+}
+
+public struct Version {
+  let major: Int?
+  let minor: Int?
+  let patch: Patch?
+
+  public init(version: String) {
+
+    let parts: Array<String> = split(version) { $0 == "." }
+    major = parts.at(0)?.toInt()
+    minor = parts.at(1)?.toInt()
+    patch = Patch(parts.at(2))
+  }
+}
+
+
 public enum Semantic {
     case Major, Minor, Patch, Same, Unknown
 }
