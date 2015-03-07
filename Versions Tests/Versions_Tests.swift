@@ -66,5 +66,11 @@ class Versions_Tests: XCTestCase {
         XCTAssertFalse("1.1.1".patchChange("1.1.1"))
     }
 
-
+  func testVersionStruct() {
+    let v = Version("1.2.3")
+    XCTAssertEqual(v.major!, 1)
+    XCTAssertEqual(v.minor!, 2)
+    XCTAssertEqual(v.patch!.number!, 3)
+    XCTAssertNil(v.patch?.string)
+  }
 }

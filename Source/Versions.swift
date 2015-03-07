@@ -11,7 +11,7 @@ import Foundation
 extension Array {
 
   func at(index: Int) -> T? {
-    if index > 0 && index < self.count {
+    if index >= 0 && index < self.count {
       return self[index]
     }
     return nil
@@ -32,22 +32,52 @@ public enum Patch {
     }
   }
 
+  var number: Int? {
+    switch self {
+      case let .NumberVersion(x): return x
+      default: return nil
+    }
+  }
+
+  var string: String? {
+    switch self {
+      case let .StringVersion(s): return s
+      default: return nil
+    }
+  }
 }
 
-public struct Version {
+
+public struct Version : Equatable {
+
   let major: Int?
   let minor: Int?
   let patch: Patch?
+  let string: String?
 
-  public init(version: String) {
-
+  public init(_ version: String) {
     let parts: Array<String> = split(version) { $0 == "." }
     major = parts.at(0)?.toInt()
     minor = parts.at(1)?.toInt()
     patch = Patch(parts.at(2))
+    string = version
   }
 }
 
+//MARK: - Equatable
+
+public func == (lhs: Version, rhs: Version) -> Bool {
+  return lhs.string == rhs.string
+}
+
+public func == (lhs: Version, rhs: Version?) -> Bool {
+  switch (rhs) {
+    case let .Some(r): return lhs.string == r.string
+    case .None: return false
+  }
+}
+
+//MARK: - Versions string functionality
 
 public enum Semantic {
     case Major, Minor, Patch, Same, Unknown
