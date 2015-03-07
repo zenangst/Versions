@@ -48,7 +48,7 @@ public enum Patch {
 }
 
 
-public struct Version : Equatable {
+public struct Version : Equatable,  Comparable{
 
   let major: Int?
   let minor: Int?
@@ -75,6 +75,12 @@ public func == (lhs: Version, rhs: Version?) -> Bool {
     case let .Some(r): return lhs.string == r.string
     case .None: return false
   }
+}
+
+//MARK: - Comparable
+
+public func < (lhs: Version, rhs: Version) -> Bool {
+  return lhs.string!.compare(rhs.string!, options: NSStringCompareOptions.NumericSearch) == .OrderedAscending
 }
 
 //MARK: - Versions string functionality
