@@ -68,9 +68,19 @@ class Versions_Tests: XCTestCase {
 
   func testVersionStruct() {
     let v = Version("1.2.3")
+
     XCTAssertEqual(v.major!, 1)
     XCTAssertEqual(v.minor!, 2)
     XCTAssertEqual(v.patch!.number!, 3)
     XCTAssertNil(v.patch?.string)
+  }
+
+  func testCompare() {
+    let v = Version("1.2.3")
+    let v2 = Version("1.2.4")
+    let vSame = Version("1.2.3")
+
+    XCTAssertFalse(v == v2)
+    XCTAssertTrue(v == vSame)
   }
 }
