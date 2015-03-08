@@ -9,6 +9,14 @@ if currentVersion.olderThan("1.1.3") {
 }
 ```
 
+Versions also support semantic versioning (Major, Minor, Patch)
+
+```swift 
+if "1.0".semanticCompare("2.0") == Semantic.Major) {
+    // major update
+}
+```
+
 ## Contribute
 
 1. Fork it
