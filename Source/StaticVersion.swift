@@ -18,41 +18,11 @@ extension Array {
   }
 }
 
-public enum Metadata {
-  case NumberVersion(Int)
-  case StringVersion(String)
-
-  public init?(_ patch: String?) {
-    switch patch {
-    case let .Some(x): switch x {
-    case let num where num.toInt() != nil: self = .NumberVersion(num.toInt()!)
-    default: self = .StringVersion(x)
-      }
-    case .None: return nil
-    }
-  }
-
-  var number: Int? {
-    switch self {
-    case let .NumberVersion(x): return x
-    default: return nil
-    }
-  }
-
-  var string: String? {
-    switch self {
-    case let .StringVersion(s): return s
-    default: return nil
-    }
-  }
-}
-
 public struct Version : Equatable,  Comparable{
 
   let major: Int
   let minor: Int
   let patch: Int
-  let metadata: Metadata?
 
   let string: String?
 
@@ -68,13 +38,11 @@ public struct Version : Equatable,  Comparable{
       self.minor = minor
       self.patch = patch
       string = version
-      metadata = nil
     } else {
-      //Failable Initializers
+      //Failed to Initialize Version
       return nil
     }
   }
-
 }
 
 //MARK: - Equatable
@@ -95,5 +63,3 @@ public func == (lhs: Version, rhs: Version?) -> Bool {
 public func < (lhs: Version, rhs: Version) -> Bool {
   return lhs.string!.compare(rhs.string!, options: NSStringCompareOptions.NumericSearch) == .OrderedAscending
 }
-
-
