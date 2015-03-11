@@ -16,3 +16,9 @@ if currentVersion.olderThan("1.1.3") {
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create pull request
+
+
+## Who's behind?
+
+- Christoffer Winterkvist ([@zenangst](https://twitter.com/zenangst))
+- Kostiantyn Koval ([@KostiaKoval](https://twitter.com/KostiaKoval))
