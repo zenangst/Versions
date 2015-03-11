@@ -35,6 +35,11 @@ class StaticVersion_Test: XCTestCase {
     let vSame = Version("1.2.3")
 
     XCTAssertFalse(v == v2)
+    XCTAssertFalse(v > vSame)
+    XCTAssertFalse(v < vSame)
+
     XCTAssertTrue(v == vSame)
+    XCTAssertTrue(v < v2)
+    XCTAssertTrue(v2 > v)
   }
 }
