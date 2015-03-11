@@ -8,6 +8,8 @@
 
 import Foundation
 
+//MARK: - Versions string functionality
+
 public enum Semantic {
     case Major, Minor, Patch, Same, Unknown
 }

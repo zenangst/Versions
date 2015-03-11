@@ -65,6 +65,4 @@ class Versions_Tests: XCTestCase {
         XCTAssertTrue("1.1.0".patchChange("1.1.1"))
         XCTAssertFalse("1.1.1".patchChange("1.1.1"))
     }
-
-
 }
