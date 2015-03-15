@@ -46,7 +46,9 @@
 				BDD822591AA4608000E48CEF /* Versions Tests */,
 				BDD822581AA4608000E48CEF /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		BDD822581AA4608000E48CEF /* Products */ = {
 			isa = PBXGroup;
