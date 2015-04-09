@@ -37,6 +37,11 @@ class Versions_Tests: XCTestCase {
     XCTAssertFalse("1.0".newerThan("1.0"))
   }
 
+  func testMultiDigitMinorVersion() {
+    XCTAssertTrue("1.9.3".olderThan("1.9.10"))
+    XCTAssertTrue("1.9.10".newerThan("1.9.3"))
+  }
+
   func testEmptyVersionString()
   {
     XCTAssertTrue("1.0".newerThan(""))
