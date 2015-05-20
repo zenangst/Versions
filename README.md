@@ -2,6 +2,17 @@
 
 Helping you find inner peace when comparing version numbers in Swift.
 
+Comparing with the current applications version couldn't be easier.
+
+```swift
+// App.version is 1.0.0
+if App.version.olderThan("2.0.0") {
+  // Prompt user to update
+}
+```
+
+But you can apply this to more things than just the `CFBundleShortVersionString`.
+
 ```swift
 let currentVersion = "1.0.1a"
 if currentVersion.olderThan("1.1.3") {
