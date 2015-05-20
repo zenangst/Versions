@@ -1,4 +1,4 @@
-##Versions
+![Versions logo](https://raw.githubusercontent.com/zenangst/Versions/master/Images/logo.png)
 
 Helping you find inner peace when comparing version numbers in Swift.
 
