@@ -15,6 +15,8 @@
 		BD87D1AF1B0CD38A00244049 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD87D1AE1B0CD38A00244049 /* Images.xcassets */; };
 		BD87D1B21B0CD38A00244049 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD87D1B01B0CD38A00244049 /* LaunchScreen.xib */; };
 		BD87D1BE1B0CD38B00244049 /* VersionsDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87D1BD1B0CD38B00244049 /* VersionsDemoTests.swift */; };
+		BD87D1C51B0CD45700244049 /* Versions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD822681AA4609000E48CEF /* Versions.swift */; };
+		BD87D1C61B0CD68700244049 /* Versions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD822681AA4609000E48CEF /* Versions.swift */; };
 		BDD8225D1AA4608000E48CEF /* Versions_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD8225C1AA4608000E48CEF /* Versions_Tests.swift */; };
 		BDD822691AA4609000E48CEF /* Versions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD822681AA4609000E48CEF /* Versions.swift */; };
 /* End PBXBuildFile section */
@@ -294,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD87D1C51B0CD45700244049 /* Versions.swift in Sources */,
 				BD87D1AA1B0CD38A00244049 /* ViewController.swift in Sources */,
 				BD87D1A51B0CD38A00244049 /* AppDelegate.swift in Sources */,
 			);
@@ -303,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD87D1C61B0CD68700244049 /* Versions.swift in Sources */,
 				BD87D1BE1B0CD38B00244049 /* VersionsDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
