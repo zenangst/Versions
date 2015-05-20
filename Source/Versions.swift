@@ -14,6 +14,19 @@ public enum Semantic {
   case Major, Minor, Patch, Same, Unknown
 }
 
+public class App {
+
+  static var version: String = {
+    var version: String = ""
+    if let infoDictionary = NSBundle.mainBundle().infoDictionary {
+      version = infoDictionary["CFBundleShortVersionString"] as! String
+    }
+
+    return version
+    }()
+
+}
+
 public extension String {
 
   subscript (i: Int) -> Character {
