@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   }
   s.author = { "Christoffer Winterkvist" => "christoffer@winterkvist.com" }
   s.social_media_url = "https://twitter.com/zenangst"
-  s.platform = :ios, '6.0'
+  s.platform = :ios, '8.0'
   s.source = {
     :git => 'https://github.com/zenangst/Versions.git',
     :tag => s.version.to_s
