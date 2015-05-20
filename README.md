@@ -17,6 +17,11 @@ if "1.0".semanticCompare("2.0") == Semantic.Major) {
 }
 ```
 
+As an added bonus, Versions also adds a super easy way to get the current application version.
+```swift
+let applicationVersion = App.version
+```
+
 ## Contribute
 
 1. Fork it
