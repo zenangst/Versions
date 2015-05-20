@@ -14,7 +14,7 @@ public enum Semantic {
   case Major, Minor, Patch, Same, Unknown
 }
 
-public class App {
+struct App {
 
   static var version: String = {
     var version: String = ""
