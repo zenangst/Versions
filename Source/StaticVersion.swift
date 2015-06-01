@@ -1,11 +1,3 @@
-//
-//  StaticVersion.swift
-//  Versions
-//
-//  Created by Konstantin Koval on 11/03/15.
-//
-//
-
 import Foundation
 
 extension Array {
