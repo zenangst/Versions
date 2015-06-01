@@ -1,11 +1,3 @@
-//
-//  Versions.swift
-//  Versions
-//
-//  Created by Christoffer Winterkvist on 3/2/15.
-//
-//
-
 import Foundation
 
 //MARK: - Versions string functionality
