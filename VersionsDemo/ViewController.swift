@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Version
 
 class ViewController: UIViewController {
 

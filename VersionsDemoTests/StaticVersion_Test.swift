@@ -8,6 +8,7 @@
 
 import UIKit
 import XCTest
+import Version
 
 class StaticVersion_Test: XCTestCase {
 
