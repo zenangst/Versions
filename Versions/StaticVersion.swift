@@ -19,14 +19,11 @@ public struct Version : Equatable,  Comparable{
 
   
   public init?(_ version: String) {
-    let parts: Array<String> = split(version) { $0 == "." }
-    let major = parts.at(0)?.toInt()
-    let minor = parts.at(1)?.toInt()
-    let patch = parts.at(2)?.toInt()
-    if let major = major, minor = minor, patch = patch {
-      self.major = major
-      self.minor = minor
-      self.patch = patch
+    let parts: Array<String> = split(version.characters) { $0 == "." }.map { String($0) }
+    if let major = parts.at(0), minor = parts.at(1), patch = parts.at(2), majorInt = Int(major), minorInt = Int(minor), patchInt = Int(patch) {
+      self.major = majorInt
+      self.minor = minorInt
+      self.patch = patchInt
       string = version
     } else {
       //Failed to Initialize Version

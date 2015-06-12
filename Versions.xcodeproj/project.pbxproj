@@ -299,7 +299,8 @@
 		BDD8224D1AA45FDD00E48CEF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				TargetAttributes = {
 					03C709DE1B24205A00609F81 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -491,6 +492,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Version;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -541,6 +543,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Version;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -599,6 +602,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Version;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -649,6 +653,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Version;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -699,6 +704,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -740,6 +746,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -791,6 +798,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VersionsDemo.app/VersionsDemo";
@@ -835,6 +843,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "no.hyper.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VersionsDemo.app/VersionsDemo";
@@ -845,6 +854,7 @@
 		BDD822511AA45FDD00E48CEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
 				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
@@ -865,6 +875,7 @@
 				03C709F91B24205A00609F81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03C70A4D1B24210C00609F81 /* Build configuration list for PBXNativeTarget "Versions-OSX" */ = {
 			isa = XCConfigurationList;
@@ -873,6 +884,7 @@
 				03C70A4F1B24210C00609F81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD87D1C31B0CD38B00244049 /* Build configuration list for PBXNativeTarget "VersionsDemo" */ = {
 			isa = XCConfigurationList;
