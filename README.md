@@ -37,7 +37,7 @@ if "1.0".semanticCompare("2.0") == Semantic.Major) {
 5. Create pull request
 
 
-## Who's behind?
+## Who made this?
 
 - Christoffer Winterkvist ([@zenangst](https://twitter.com/zenangst))
 - Kostiantyn Koval ([@KostiaKoval](https://twitter.com/KostiaKoval))
