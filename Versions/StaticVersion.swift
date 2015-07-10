@@ -2,7 +2,7 @@ import Foundation
 
 extension Array {
 
-  func at(index: Int) -> T? {
+  func at(index: Int) -> Element? {
     if index >= 0 && index < self.count {
       return self[index]
     }
