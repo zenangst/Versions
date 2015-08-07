@@ -19,7 +19,8 @@ public struct Version : Equatable,  Comparable{
 
   
   public init?(_ version: String) {
-    let parts: Array<String> = split(version.characters) { $0 == "." }.map { String($0) }
+    
+    let parts: Array<String> = version.characters.split { $0 == "." }.map { String($0) }
     if let major = parts.at(0), minor = parts.at(1), patch = parts.at(2), majorInt = Int(major), minorInt = Int(minor), patchInt = Int(patch) {
       self.major = majorInt
       self.minor = minorInt
