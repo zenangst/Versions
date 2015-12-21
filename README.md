@@ -28,6 +28,19 @@ if "1.0".semanticCompare("2.0") == Semantic.Major) {
 }
 ```
 
+## CocoaPod
+
+[![Version](https://img.shields.io/cocoapods/v/Versions.svg?style=flat)](http://cocoapods.org/pods/Versions)
+[![License](https://img.shields.io/cocoapods/l/Versions.svg?style=flat)](http://cocoapods.org/pods/Versions)
+[![Platform](https://img.shields.io/cocoapods/p/Versions.svg?style=flat)](http://cocoapods.org/pods/Versions)
+
+Verisons is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod "Versions"
+```
+
 ## Contribute
 
 1. Fork it
