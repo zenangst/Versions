@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
     :git => 'https://github.com/zenangst/Versions.git',
     :tag => s.version.to_s
   }
-  s.source_files = 'Source/*.*'
+  s.source_files = 'Versions/*.swift'
   s.frameworks = 'Foundation'
   s.requires_arc = true
 end
