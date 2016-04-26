@@ -31,7 +31,7 @@ public extension String {
   
 
   public subscript (r: Range<Int>) -> String {
-    return substringWithRange(Range(start: startIndex.advancedBy(r.startIndex), end: startIndex.advancedBy(r.endIndex)))
+    return substringWithRange(startIndex.advancedBy(r.startIndex)..<startIndex.advancedBy(r.endIndex))
   }
   
 
