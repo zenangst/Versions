@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "Versions"
-  s.version = "0.4.0"
+  s.version = "0.5.0"
   s.summary = "Helping you find inner peace when comparing version numbers in Swift."
   s.description = <<-DESC
                    * Helping you find inner peace when comparing version numbers in Swift.
