@@ -3,14 +3,14 @@ import Foundation
 //MARK: - Versions string functionality
 
 public enum Semantic {
-  case Major, Minor, Patch, Same, Unknown
+  case major, minor, patch, same, unknown
 }
 
 public struct App {
 
   public static var version: String = {
     var version: String = ""
-    if let infoDictionary = NSBundle.mainBundle().infoDictionary {
+    if let infoDictionary = Bundle.main.infoDictionary {
       version = infoDictionary["CFBundleShortVersionString"] as! String
     }
     return version
@@ -21,7 +21,7 @@ public struct App {
 public extension String {
 
   public subscript (i: Int) -> Character {
-    return self[self.startIndex.advancedBy(i)]
+    return self[self.characters.index(self.startIndex, offsetBy: i)]
   }
 
   
@@ -31,7 +31,7 @@ public extension String {
   
 
   public subscript (r: Range<Int>) -> String {
-    return substringWithRange(startIndex.advancedBy(r.startIndex)..<startIndex.advancedBy(r.endIndex))
+    return substring(with: characters.index(startIndex, offsetBy: r.lowerBound)..<characters.index(startIndex, offsetBy: r.upperBound))
   }
   
 
@@ -41,53 +41,53 @@ public extension String {
 
   
   public var minor: String {
-    return self[0...2]
+    return self[Range(0...2)]
   }
   
 
   public var patch: String {
-    return self[0...4]
+    return self[Range(0...4)]
   }
   
 
-  public func newerThan(version :String) -> Bool {
-    return self.compare(version, options: NSStringCompareOptions.NumericSearch) == NSComparisonResult.OrderedDescending
+  public func newerThan(_ version :String) -> Bool {
+    return self.compare(version, options: NSString.CompareOptions.numeric) == ComparisonResult.orderedDescending
   }
   
 
-  public func olderThan(version: String) -> Bool {
+  public func olderThan(_ version: String) -> Bool {
     let isEqual: Bool = self == version
     return !isEqual ? !self.newerThan(version) : false
   }
   
 
-  public func majorChange(version: String) -> Bool {
+  public func majorChange(_ version: String) -> Bool {
     return self.major != version.major
   }
   
   
-  public func minorChange(version: String) -> Bool {
+  public func minorChange(_ version: String) -> Bool {
     return self.minor != version.minor && self.olderThan(version)
   }
   
   
-  public func patchChange(version: String) -> Bool {
+  public func patchChange(_ version: String) -> Bool {
     return self.patch != version.patch && self.olderThan(version)
   }
   
 
-  public func semanticCompare(version: String) -> Semantic {
+  public func semanticCompare(_ version: String) -> Semantic {
     switch self {
     case _ where self == version:
-      return .Same
+      return .same
     case _ where self.major != version.major:
-      return .Major
+      return .major
     case _ where self.minor != version.minor && self.olderThan(version):
-      return .Minor
+      return .minor
     case _ where self.patch != version.patch && self.olderThan(version):
-      return .Patch
+      return .patch
     default:
-      return .Unknown
+      return .unknown
     }
   }
 }

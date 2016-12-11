@@ -20,8 +20,6 @@ class VersionsDemoTests: XCTestCase {
   }
 
   func testAppVersionCompare() {
-    let version = App.version
-
     XCTAssertTrue(App.version.newerThan("1.0.0"))
   }
 
