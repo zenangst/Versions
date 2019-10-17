@@ -31,16 +31,16 @@ class StaticVersion_Test: XCTestCase {
 
   func testCompare() {
 
-    let v = Version("1.2.3")
-    let v2 = Version("1.2.4")
-    let vSame = Version("1.2.3")
+    if let v = Version("1.2.3"), let v2 = Version("1.2.4"), let vSame = Version("1.2.3"){
+      XCTAssertFalse(v == v2)
+      XCTAssertFalse(v > vSame)
+      XCTAssertFalse(v < vSame)
 
-    XCTAssertFalse(v == v2)
-    XCTAssertFalse(v > vSame)
-    XCTAssertFalse(v < vSame)
-
-    XCTAssertTrue(v == vSame)
-    XCTAssertTrue(v < v2)
-    XCTAssertTrue(v2 > v)
+      XCTAssertTrue(v == vSame)
+      XCTAssertTrue(v < v2)
+      XCTAssertTrue(v2 > v)
+    }else{
+      assertionFailure("Versions nil")
+    }
   }
 }
