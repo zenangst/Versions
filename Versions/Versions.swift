@@ -80,9 +80,9 @@ public extension String {
     switch self {
     case _ where self == version:
       return .same
-    case _ where self.major != version.major:
+    case _ where self.major != version.major && self.olderThan(version: version):
       return .major
-    case _ where self.minor != version.minor && self.olderThan(version: version):
+    case _ where (self.minor != version.minor && self.olderThan(version: version)) || (self.major == version.major && self.newerThan(version: version)):
       return .minor
     case _ where self.patch != version.patch && self.olderThan(version: version):
       return .patch
