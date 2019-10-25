@@ -5,22 +5,6 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
-      <BuildActionEntries>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "03C70A331B24210C00609F81"
-               BuildableName = "Version.framework"
-               BlueprintName = "Versions-OSX"
-               ReferencedContainer = "container:Versions.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -28,6 +12,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BD87D1B61B0CD38B00244049"
+               BuildableName = "VersionsDemoTests.xctest"
+               BlueprintName = "VersionsDemoTests"
+               ReferencedContainer = "container:Versions.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -40,15 +34,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "03C70A331B24210C00609F81"
-            BuildableName = "Version.framework"
-            BlueprintName = "Versions-OSX"
+            BlueprintIdentifier = "BD87D19F1B0CD38A00244049"
+            BuildableName = "VersionsDemo.app"
+            BlueprintName = "VersionsDemo"
             ReferencedContainer = "container:Versions.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -59,9 +54,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "03C70A331B24210C00609F81"
-            BuildableName = "Version.framework"
-            BlueprintName = "Versions-OSX"
+            BlueprintIdentifier = "BD87D19F1B0CD38A00244049"
+            BuildableName = "VersionsDemo.app"
+            BlueprintName = "VersionsDemo"
             ReferencedContainer = "container:Versions.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
